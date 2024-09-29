@@ -1,0 +1,134 @@
+.product-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td,
+th {
+    vertical-align: middle;
+}
+
+table {
+    margin-top: 20px;
+}
+
+/* Deshboard.css */
+.add-product-btn {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.add-product-btn:hover {
+    background-color: #218838;
+    border-color: #218838;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Style for the search and button container */
+.search-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px; /* Add spacing between items */
+    flex-wrap: wrap; /* For responsiveness */
+}
+
+
+/* Style for the search input */
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border: 2px solid #007bff;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 3px 8px rgba(0, 91, 187, 0.3);
+}
+
+/* Custom button style */
+.add-product-btn, .refresh-btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.add-product-btn {
+    background-color: #28a745;
+    border: none;
+}
+
+.add-product-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.refresh-btn {
+    background-color: #17a2b8;
+    border: none;
+    color: white;
+}
+
+.refresh-btn:hover {
+    background-color: #138496;
+    transform: scale(1.05);
+}
+
+/* Modal Content Styling */
+.modal-body img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-body h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-align: center;
+}
+.modal-body p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: center;
+}
+.modal-body p span {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}

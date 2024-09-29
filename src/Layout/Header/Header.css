@@ -1,0 +1,29 @@
+/* Header.css */
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  .nav-link.active {
+    color: #007bff; /* Highlight active link */
+    font-weight: bold;
+  }
+  
+  .logo {
+    max-height: 40px;
+    width: auto;
+  }
+  
+  .navbar-toggler {
+    border-color: #ccc;
+  }
+  
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  
