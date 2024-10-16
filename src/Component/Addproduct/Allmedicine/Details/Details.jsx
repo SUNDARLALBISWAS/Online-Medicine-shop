@@ -22,7 +22,7 @@ const Details = () => {
 
     useEffect(() => {
         getProduct();
-    }, [api]);
+    }, [getProduct,api]);
 
     return (
         <section className='py-5'>

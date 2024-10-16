@@ -28,15 +28,14 @@ const Adminregister = () => {
 
     const [olddata, setOlddata] = useState([]);
     useEffect(() => {
-        axios
-            .get(api)
+        axios.get(api)
             .then((result) => {
                 setOlddata(result.data);
             })
             .catch((error) => {
                 console.log("Error", error);
             });
-    }, []);
+    }, [api]);
     const emailRegex = /^([a-z0-9.-]+)@([a-z]{5,12}).([a-z.]{2,20})$/;
 
     const changeHandler = (event) => {

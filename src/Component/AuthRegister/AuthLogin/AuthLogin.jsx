@@ -37,7 +37,7 @@ const Authlogin = () => {
 
     useEffect(() => {
         getLogin();
-    }, [api]);
+    }, [getLogin, api]);
 
     const changeHandler = (event) => {
         const { name, value } = event.target;

@@ -29,7 +29,7 @@ const Allmedicine = () => {
 
   useEffect(() => {
     getProduct();
-  }, [api]);
+  }, [getProduct, api]);
 
   // Search and filter products
   const filteredItems = state.filter((item) => {

@@ -24,7 +24,7 @@ const Profile = () => {
 
     useEffect(() => {
         getDetails();
-    }, [api]);
+    }, [getDetails,api]);
 
     const logOut = () => {
         window.sessionStorage.removeItem("isUserLogged");

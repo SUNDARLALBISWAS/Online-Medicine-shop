@@ -50,7 +50,7 @@ const AuthRegister = () => {
       .catch((error) => {
         console.log("Error", error);
       });
-  }, []);
+  }, [api]);
 
   const changeHandler = (event) => {
     const { name, value } = event.target;

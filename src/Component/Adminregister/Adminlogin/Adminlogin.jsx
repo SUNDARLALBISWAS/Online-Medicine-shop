@@ -24,7 +24,7 @@ const Adminlogin = () => {
   }
   useEffect(() => {
     getLogin()
-  }, [setOlddata, api])
+  }, [getLogin, api])
 
   const changeHandler = (event) => {
     const { name, value } = event.target;

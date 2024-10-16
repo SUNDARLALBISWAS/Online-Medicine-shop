@@ -45,7 +45,7 @@ const Editpage = () => {
     };
     useEffect(() => {
         getDetails();
-    }, [api]);
+    }, [getDetails, api]);
 
     const changeHandler = (event) => {
         const { name, value } = event.target;

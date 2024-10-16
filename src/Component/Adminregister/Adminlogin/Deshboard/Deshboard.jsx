@@ -28,7 +28,7 @@ const Deshboard = () => {
 
     useEffect(() => {
         getProduct();
-    }, [api]);
+    }, [getProduct, api]);
 
     // Delete product
     const deleteItem = (ele_id) => {
