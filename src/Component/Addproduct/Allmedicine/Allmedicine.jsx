@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import base_url, { end_point } from '../../../Api/Api';
 import { Container, Row, Col, Card, Button, Pagination, Form } from 'react-bootstrap';
+import { useCallback } from 'react';
 
 const Allmedicine = () => {
   const api = base_url + end_point.prod;
@@ -17,19 +18,19 @@ const Allmedicine = () => {
   const itemsPerPage = 6;
 
 
-  const getProduct = () => {
-    axios.get(api)
-      .then(result => {
-        setState(result.data)
-      })
-      .catch(error => {
-        console.log("Error", error);
-      });
-  }
-
   useEffect(() => {
+    const getProduct = () => {
+      axios.get(api)
+        .then(result => {
+          setState(result.data)
+        })
+        .catch(error => {
+          console.log("Error", error);
+        });
+    };
     getProduct();
-  }, [getProduct, api]);
+  }, [api]); // Add only 'api' as a dependency
+  
 
   // Search and filter products
   const filteredItems = state.filter((item) => {

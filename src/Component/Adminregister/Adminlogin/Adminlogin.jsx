@@ -15,16 +15,20 @@ const Adminlogin = () => {
   });
 
   const [olddata, setOlddata] = useState([]);
-  const getLogin = () => {
-    axios.get(api).then((result) => {
-      setOlddata(result.data);
-    })
-      .catch((error) => { 
-      });
-  }
   useEffect(() => {
-    getLogin()
-  }, [getLogin, api])
+    const getLogin = () => {
+      axios.get(api)
+        .then((result) => {
+          setOlddata(result.data);
+        })
+        .catch((error) => {
+          console.log("Axios Error", error);
+        });
+    };
+  
+    getLogin();
+  }, [api]);  // Only depend on 'api'
+  
 
   const changeHandler = (event) => {
     const { name, value } = event.target;

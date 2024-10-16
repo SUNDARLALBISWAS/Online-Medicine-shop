@@ -9,21 +9,21 @@ const Details = () => {
     let api = `http://localhost:1000/product/${id}`;
     let [state, setState] = useState([]);
 
-    const getProduct = () => {
-        axios.get(api)
-            .then(result => {
-                console.log("Result", result.data);
-                setState([result.data]);
-            })
-            .catch(error => {
-                console.log("Axios Error", error);
-            });
-    };
-
     useEffect(() => {
+        const getProduct = () => {
+            axios.get(api)
+                .then(result => {
+                    console.log("Result", result.data);
+                    setState([result.data]);
+                })
+                .catch(error => {
+                    console.log("Axios Error", error);
+                });
+        };
+    
         getProduct();
-    }, [getProduct,api]);
-
+    }, [api]); // Add only 'api' as a dependency
+    
     return (
         <section className='py-5'>
             <Container>
